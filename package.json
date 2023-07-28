@@ -7,9 +7,7 @@
   },
   "author": "",
   "devDependencies": {
+    "@babel/preset-env": "^7.22.9",
     "jest": "^29.3.1"
-  },
-  "dependencies": {
-    "@babel/preset-env": "^7.20.2"
   }
 }
