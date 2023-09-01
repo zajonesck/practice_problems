@@ -1,0 +1,27 @@
+const students = [
+  { name: "Alice", grade: 92 },
+  { name: "Bob", grade: 85 },
+  { name: "Charlie", grade: 78 },
+  { name: "David", grade: 55 },
+];
+
+function getLetterGrade(grade) {
+  if (grade >= 90) return "A";
+  if (grade >= 80) return "B";
+  if (grade >= 70) return "C";
+  if (grade >= 60) return "D";
+  return "F";
+}
+const reportcards = students.map((student) => {
+  return `${student.name} received an ${getLetterGrade(student.grade)}.`;
+});
+// Your code here
+
+console.log(reportcards);
+// Expected output:
+// [
+//   "Alice received an A.",
+//   "Bob received a B.",
+//   "Charlie received a C.",
+//   "David received an F."
+// ]
