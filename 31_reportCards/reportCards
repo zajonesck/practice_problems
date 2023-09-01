@@ -15,7 +15,6 @@ function getLetterGrade(grade) {
 const reportcards = students.map((student) => {
   return `${student.name} received an ${getLetterGrade(student.grade)}.`;
 });
-// Your code here
 
 console.log(reportcards);
 // Expected output:
