@@ -1,0 +1,19 @@
+let gradeCalc = function (grade) {
+  if (grade < 0 || grade > 100) {
+    return "Error: Invalid grade input. Please enter a score between 0 and 100.";
+  } else if (grade > 89) {
+    return "Grade is an A";
+  } else if (grade > 79) {
+    return "Grade is a B";
+  } else if (grade > 69) {
+    return "Grade is a C";
+  } else if (grade > 59) {
+    return "Grade is a D";
+  } else {
+    return "grade is a F";
+  }
+};
+
+console.log(gradeCalc(88));
+console.log(gradeCalc(105));
+console.log(gradeCalc(-5));
