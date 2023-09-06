@@ -1,0 +1,29 @@
+let ticketPrice = function (age, day) {
+  if (
+    day !== "Monday" &&
+    day !== "Tuesday" &&
+    day !== "Wednesday" &&
+    day !== "Thursday" &&
+    day !== "Friday" &&
+    day !== "Saturday" &&
+    day !== "Sunday"
+  ) {
+    return "Error: Invalid day of the week";
+  } else if (age < 13) {
+    return "ticket price $5";
+  } else if (age > 59) {
+    return "ticket price $7";
+  } else {
+    if (day === "Tuesday") {
+      return "ticket price $8";
+    } else {
+      return "ticket price $10";
+    }
+  }
+};
+
+console.log(ticketPrice(12, "Thursday"));
+console.log(ticketPrice(77, "Wednesday"));
+console.log(ticketPrice(25, "Friday"));
+console.log(ticketPrice(25, "Tuesday"));
+console.log(ticketPrice(35, "fhjagdsj"));
