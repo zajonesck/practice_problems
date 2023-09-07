@@ -1,0 +1,28 @@
+let tempConverter = function (int, temp1, temp2) {
+  if (temp1 !== "Celsius" && temp1 !== "Fahrenheit" && temp1 !== "Kelvin") {
+    return "Error: Invalid temperature Scale";
+  }
+  if (temp1 === temp2) {
+    return "Source and target scales are the same. No conversion needed.";
+  }
+
+  if (temp1 === "Celsius") {
+    if (temp2 === "Fahrenheit") {
+      return int * (9 / 5) + 32 + "F";
+    } else {
+      return int + 273.15 + "K";
+    }
+  } else if (temp1 === "Fahrenheit") {
+    if (temp2 === "Celsius") {
+      return (int - 32) * (5 / 9) + "C";
+    } else {
+      return (int - 32) * (5 / 9) + 273.15 + "K";
+    }
+  } else if (temp1 === "Kelvin") {
+    if (temp2 === "Celsius") {
+      return int - 273.15 + "C";
+    } else {
+      return (int - 273.15) * (9 / 5) + 32 + "F";
+    }
+  }
+};

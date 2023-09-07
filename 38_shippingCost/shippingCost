@@ -1,0 +1,34 @@
+let shippingCost = function (weight, method) {
+  if (method !== "Standard" && method !== "Express" && method !== "Overnight") {
+    return "Error: Invalid shipping method";
+  } else if (method === "Standard") {
+    if (weight > 5) {
+      return "Shipping cost $20";
+    } else if (weight > 1) {
+      return "Shipping cost $10";
+    } else {
+      return "Shipping cost $5";
+    }
+  } else if (method === "Express") {
+    if (weight > 5) {
+      return "Shipping cost $30";
+    } else if (weight > 1) {
+      return "Shipping cost $15";
+    } else {
+      return "Shipping cost $10";
+    }
+  } else if (method === "Overnight") {
+    if (weight > 5) {
+      return "Shipping cost $50";
+    } else if (weight > 1) {
+      return "Shipping cost $30";
+    } else {
+      return "Shipping cost $20";
+    }
+  }
+};
+
+console.log(shippingCost(0.5, "Standard")); // Shipping cost $5
+console.log(shippingCost(4, "Express")); // Shipping cost $15
+console.log(shippingCost(6, "Overnight")); // Shipping cost $50
+console.log(shippingCost(2, "InvalidMethod")); // Error: Invalid shipping method
